@@ -1,27 +1,30 @@
 <%-include("partials/header.ejs")%>
 
-<body>
+<div class="add-title">
     <h1 class="title">Add a Book</h1>
-    <div class="add-container">
-        <h2 class="subtitle">Lorem ipsum dolor sit ame</h2>
-        <h3 class="author-text">By Pablo Armendariz</h3>
-        <form id="book-data">
-            <h4 class="small-title">Review</h4>
-            <input class="review-input" type="text" name="review" required>
-            <h4 class="small-title">Rating</h4>
-            <input class="rating-input" type="text" name="rating" required>
-        </form>
-        <div class="bottom-buttons">
-            <button class="brown-button" type="submit" form="book-data">
-                <p>Submit</p>
-                <img src="/images/edit.png"/>
-            </button>
-            <button class="brown-button">
-                <p>Cancel</p>
-                <img src="/images/delete.png"/>
-            </button>
-        </div>
+</div>
+<div class="add-container">
+    <h2 class="subtitle">Lorem ipsum dolor sit ame</h2>
+    <h3 class="author-text">By Pablo Armendariz</h3>
+
+    <form id="book-data">
+        <h4 class="small-title">Review</h4>
+        <textarea class="review-input" name="review" required></textarea>
+        <h4 class="small-title">Rating (1-10)</h4>
+        <input class="rating-input" type="number" name="rating" min="1" max="10" required>
+    </form>
+    <div class="bottom-buttons">
+        <button class="brown-button" type="submit" form="book-data">
+            <p>Add</p>
+            <img src="/images/plus.png"/>
+        </button>
+        <button id="cancelButton" class="brown-button">
+            <p>Cancel</p>
+            <img src="/images/delete.png"/>
+        </button>
     </div>
-</body>
+</div>
+
+<script src="/action/handleCancel.js"></script>
 
 <%-include("partials/footer.ejs")%>

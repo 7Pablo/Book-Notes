@@ -78,7 +78,7 @@ body {
     margin-bottom: 4rem;
     margin-left: 4rem;
     margin-right: 4rem;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .brown-button {
@@ -207,4 +207,76 @@ footer > div {
 footer p {
     font-family: 'Merriweather', serif;
     color: white;
+}
+
+/* Add and edit */
+
+.add-title {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+}
+
+.add-container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+    background-color: #FAE7C9;
+    border-radius: 30px;
+    padding: 3rem;
+}
+
+.add-container > h2 {
+    margin-bottom: 0.5rem;
+}
+
+#book-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.small-title {
+    font-family: 'Open Sans', sans-serif;
+    color: #706233;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+
+.review-input {
+    border: none;
+    border-radius: 15px;
+    height: 8rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    resize: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1;
+}
+
+.rating-input {
+    border: none;
+    border-radius: 15px;
+    width: 8rem;
+    padding: 0.25rem;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+}
+
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }

@@ -1,6 +1,5 @@
 <%-include("partials/header.ejs")%>
 
-<body>
     <div class="top-container">
         <div class="title-container">
             <img src="/images/books.png" alt="books icon"/>
@@ -10,7 +9,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
     </div>
     <div class="top-buttons">
-        <button class="brown-button">
+        <button id="addButton" class="brown-button">
             <p>Add</p>
             <img src="/images/plus.png" alt="plus icon"/>
         </button>
@@ -34,10 +33,12 @@
                 <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
             </div>
         </div>
-        <button class="brown-button">
+        <button id="editButton" class="brown-button">
             <p>Edit</p>
             <img src="/images/edit.png" alt="edit icon"/>
         </button>
     </div>
+
+    <script src="/action/handleClick.js"></script>
 
 <%-include("partials/footer.ejs")%>

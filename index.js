@@ -24,6 +24,14 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 })
 
+app.get("/add", (req, res) => {
+    res.render("add.ejs");
+})
+
+app.get("/edit", (req, res) => {
+    res.render("edit.ejs");
+})
+
 app.listen(port, () => {
     console.log("Server running on port " + port);
 })
