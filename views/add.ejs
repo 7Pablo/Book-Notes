@@ -1,0 +1,27 @@
+<%-include("partials/header.ejs")%>
+
+<body>
+    <h1 class="title">Add a Book</h1>
+    <div class="add-container">
+        <h2 class="subtitle">Lorem ipsum dolor sit ame</h2>
+        <h3 class="author-text">By Pablo Armendariz</h3>
+        <form id="book-data">
+            <h4 class="small-title">Review</h4>
+            <input class="review-input" type="text" name="review" required>
+            <h4 class="small-title">Rating</h4>
+            <input class="rating-input" type="text" name="rating" required>
+        </form>
+        <div class="bottom-buttons">
+            <button class="brown-button" type="submit" form="book-data">
+                <p>Submit</p>
+                <img src="/images/edit.png"/>
+            </button>
+            <button class="brown-button">
+                <p>Cancel</p>
+                <img src="/images/delete.png"/>
+            </button>
+        </div>
+    </div>
+</body>
+
+<%-include("partials/footer.ejs")%>

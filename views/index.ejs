@@ -1,0 +1,43 @@
+<%-include("partials/header.ejs")%>
+
+<body>
+    <div class="top-container">
+        <div class="title-container">
+            <img src="/images/books.png" alt="books icon"/>
+            <h1 class="title">Book Notes</h1>
+        </div>
+        <h2 class="subtitle">By Pablo Armendariz</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
+    </div>
+    <div class="top-buttons">
+        <button class="brown-button">
+            <p>Add</p>
+            <img src="/images/plus.png" alt="plus icon"/>
+        </button>
+        <form class="filter-dropdown">
+            <select name="filter">
+                <option value="" disabled selected>Filter</option>
+                <option value="date">Date</option>
+                <option value="asc">Rating ASC</option>
+                <option value="dec">Rating DEC</option>
+            </select>
+        </form>
+    </div>
+    <div class="book-container">
+        <div class="book-top">
+            <img src="/images/cover-placeholder.jpg"/>
+            <div class="book-info">
+                <h2 class="subtitle">Lorem ipsum dolor sit ameLorem ipsum dolor sit ame</h2>
+                <h3 class="author-text">By Pablo Armendariz</h2>
+                <p class="gray-text">Date created: Date created: 2018-07-25</p>
+                <p class="gray-text">Rating: 7.5</p>
+                <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
+            </div>
+        </div>
+        <button class="brown-button">
+            <p>Edit</p>
+            <img src="/images/edit.png" alt="edit icon"/>
+        </button>
+    </div>
+
+<%-include("partials/footer.ejs")%>
