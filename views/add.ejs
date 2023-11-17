@@ -4,23 +4,23 @@
     <h1 class="title">Add a Book</h1>
 </div>
 <div class="add-container">
-    <h2 class="subtitle">Lorem ipsum dolor sit ame</h2>
-    <h3 class="author-text">By Pablo Armendariz</h3>
 
-    <form id="book-data">
+    <form id="add-data" action="/add" method="POST">
+        <h4 class="small-title">Book ISBN</h4>
+        <input class="book-isbn" type="text" name="isbn" required></textarea>
         <h4 class="small-title">Review</h4>
         <textarea class="review-input" name="review" required></textarea>
         <h4 class="small-title">Rating (1-10)</h4>
-        <input class="rating-input" type="number" name="rating" min="1" max="10" required>
+        <input class="rating-input" type="number" name="rating" min="1" max="10" step="0.1" required>
     </form>
     <div class="bottom-buttons">
-        <button class="brown-button" type="submit" form="book-data">
+        <button class="brown-button" type="submit" form="add-data">
             <p>Add</p>
             <img src="/images/plus.png"/>
         </button>
         <button id="cancelButton" class="brown-button">
             <p>Cancel</p>
-            <img src="/images/delete.png"/>
+            <img src="/images/cancel.png"/>
         </button>
     </div>
 </div>

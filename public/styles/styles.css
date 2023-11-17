@@ -182,31 +182,14 @@ body {
     margin-top: 2rem;
 }
 
-.book-container > .brown-button {
+.book-container  .brown-button {
     width: 8rem;
     height: 2.5rem;
+    margin-top: 1rem;
 }
 
-.book-container > .brown-button > p{
+.book-container .brown-button > p{
     font-size: 1.25rem;
-}
-
-/* footer */
-
-footer {
-    background-color: #706233;
-}
-
-footer > div {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 6rem;
-}
-
-footer p {
-    font-family: 'Merriweather', serif;
-    color: white;
 }
 
 /* Add and edit */
@@ -231,7 +214,7 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
-#book-data {
+#add-data, #edit-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,6 +229,18 @@ footer p {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
     margin-top: 0;
+}
+
+.book-isbn {
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    resize: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #333333;
 }
 
 .review-input {
@@ -274,9 +269,26 @@ footer p {
     text-align: center;
 }
 
-
 .bottom-buttons {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+}
+
+/* footer */
+
+footer {
+    background-color: #706233;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 6rem;
+}
+
+footer p {
+    font-family: 'Merriweather', serif;
+    color: white;
 }

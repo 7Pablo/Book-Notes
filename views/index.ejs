@@ -22,22 +22,35 @@
             </select>
         </form>
     </div>
-    <div class="book-container">
-        <div class="book-top">
-            <img src="/images/cover-placeholder.jpg"/>
-            <div class="book-info">
-                <h2 class="subtitle">Lorem ipsum dolor sit ameLorem ipsum dolor sit ame</h2>
-                <h3 class="author-text">By Pablo Armendariz</h2>
-                <p class="gray-text">Date created: Date created: 2018-07-25</p>
-                <p class="gray-text">Rating: 7.5</p>
-                <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
+
+    <% books.forEach(book => { %>
+        <div class="book-container">
+            <div class="book-top">
+                <img src="<%= book.cover_url %>" alt="book cover"/>
+                <div class="book-info">
+                    <h2 class="subtitle"><%= book.title %></h2>
+                    <h3 class="author-text">By <%= book.author %></h2>
+                    <p class="gray-text">Date created: <%= book.date.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric"
+                      }); %></p>
+                    <p class="gray-text">Rating: <%= book.rating %></p>
+                    <p class="info-text"><%= book.review %></p>
+                </div>
+            </div>
+            <div class="bottom-buttons">
+                <button id="editButton" class="brown-button">
+                    <p>Edit</p>
+                    <img src="/images/edit.png" alt="edit icon"/>
+                </button>
+                <button class="brown-button">
+                    <p>Delete</p>
+                    <img src="/images/delete.png" alt="edit icon"/>
+                </button>
             </div>
         </div>
-        <button id="editButton" class="brown-button">
-            <p>Edit</p>
-            <img src="/images/edit.png" alt="edit icon"/>
-        </button>
-    </div>
+    <% }); %>
 
     <script src="/action/handleClick.js"></script>
 
