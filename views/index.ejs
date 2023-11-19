@@ -6,19 +6,20 @@
             <h1 class="title">Book Notes</h1>
         </div>
         <h2 class="subtitle">By Pablo Armendariz</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus magna. Mauris eget fringilla lacus. Suspendisse ligula magna, fringilla eu auctor at, scelerisque non metus. Nunc eu mauris et velit tempus dignissim. </p>
+        <p>Welcome to the Book Notes web app! Easily add and showcase your reads by searching ISBNs, adding reviews, and ratings (1-10). Navigate your collection effortlessly on the homepage, filtering by entry date or sorting by ascending/descending rating. Manage your bookshelf with the ability to delete or update entries. Happy reading!</p>
     </div>
     <div class="top-buttons">
         <button id="addButton" class="brown-button">
             <p>Add</p>
             <img src="/images/plus.png" alt="plus icon"/>
         </button>
-        <form class="filter-dropdown">
-            <select name="filter">
+        <form id="filterForm" class="filter-dropdown" action="/filter" method="GET">
+            <select id="filterSelect" name="filter">
                 <option value="" disabled selected>Filter</option>
-                <option value="date">Date</option>
-                <option value="asc">Rating ASC</option>
-                <option value="dec">Rating DEC</option>
+                <option value="dateAsc">Date ASC</option>
+                <option value="dateDesc">Date DESC</option>
+                <option value="rateAsc">Rating ASC</option>
+                <option value="rateDesc">Rating DESC</option>
             </select>
         </form>
     </div>
@@ -32,7 +33,7 @@
                     <h3 class="author-text">By <%= book.author %></h2>
                     <p class="gray-text">Date created: <%= book.date.toLocaleDateString("en-US", {
                         year: "numeric",
-                        month: "short",
+                        month: "short", 
                         day: "numeric"
                       }); %></p>
                     <p class="gray-text">Rating: <%= book.rating %></p>
@@ -40,14 +41,18 @@
                 </div>
             </div>
             <div class="bottom-buttons">
-                <button id="editButton" class="brown-button">
-                    <p>Edit</p>
-                    <img src="/images/edit.png" alt="edit icon"/>
-                </button>
-                <button class="brown-button">
-                    <p>Delete</p>
-                    <img src="/images/delete.png" alt="edit icon"/>
-                </button>
+                <form action="/edit" method="GET">
+                    <button class="brown-button" type="submit" name="editButton" value="<%= book.id %>">
+                        <p>Edit</p>
+                        <img src="/images/edit.png" alt="edit icon"/>
+                    </button>
+                </form>
+                <form action="/delete" method="POST">
+                    <button class="brown-button" type="submit" name="deleteButton" value="<%= book.id %>">
+                        <p>Delete</p>
+                        <img src="/images/delete.png" alt="edit icon"/>
+                    </button>
+                </form>
             </div>
         </div>
     <% }); %>

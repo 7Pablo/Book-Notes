@@ -4,20 +4,21 @@
     <h1 class="title">Edit</h1>
 </div>
 <div class="add-container">
-    <h2 class="subtitle">Lorem ipsum dolor sit ame</h2>
-    <h3 class="author-text">By Pablo Armendariz</h3>
+    <h2 class="subtitle"><%= book[0].title %></h2>
+    <h3 class="author-text">By <%= book[0].author %></h3>
 
-    <form id="edit-data">
+    <form id="edit-data" action="/edit" method="POST">
         <h4 class="small-title">Review</h4>
-        <textarea class="review-input" name="review" required></textarea>
+        <textarea class="review-input" name="review" required><%= book[0].review %></textarea>
         <h4 class="small-title">Rating (1-10)</h4>
-        <input class="rating-input" type="number" name="rating" min="1" max="10" required>
+        <input class="rating-input" type="number" name="rating" min="1" max="10" step="0.1" value="<%= book[0].rating %>" required>
     </form>
     <div class="bottom-buttons">
-        <button class="brown-button" type="submit" form="book-data">
+        <button class="brown-button" type="submit" form="edit-data" name="editButton" value="<%= book[0].id %>">
             <p>Submit</p>
             <img src="/images/edit.png"/>
         </button>
+
         <button id="cancelButton" class="brown-button">
             <p>Cancel</p>
             <img src="/images/cancel.png"/>
