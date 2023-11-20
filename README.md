@@ -18,14 +18,14 @@ Make sure you have the following dependencies installed:
 
 You can install them by running:
 
---bash
+###bash
 npm install
 
 ## Database Configuration
 
 1. Inside the `backend/index.js` file, locate the PostgreSQL client configuration:
 
-    --javascript
+    ###javascript
     const db = new pg.Client({
         user: "your_postgres_user",
         host: "localhost",
@@ -38,12 +38,12 @@ npm install
 
 2. Create a database called `books`:
 
-    --sql
+    ###sql
     CREATE DATABASE books;
 
 3. Run the queries in `backend/queries.sql` to create the necessary table:
 
-    --sql
+    ###sql
     Provided queries to create the books_read table
 
     Use a PostgreSQL tool like pgAdmin or run these queries through a command-line interface.
@@ -52,11 +52,10 @@ npm install
 
 Return to the terminal and start the server:
 
-    --bash
+    ###bash
     npm node index.js
 
     or with nodemon:
 
-    --bash
+    ###bash
     nodemon index.js
-    ```
